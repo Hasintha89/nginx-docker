@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    restart: always
+
+  logger:
+    image: busybox
+    command: sh -c "while true; do echo Hello from logger; sleep 5; done"
